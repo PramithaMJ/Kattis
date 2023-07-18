@@ -26,6 +26,7 @@ string timeConversion(string s) {
             hour = "00";
         }
         return hour + ":" + min + ":" + sec;
+    
 }
 
 int main()
