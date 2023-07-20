@@ -14,7 +14,6 @@ vector<string> split(const string &);
  *  1. INTEGER_ARRAY a
  *  2. INTEGER_ARRAY b
  */
-
 int getTotalX(vector<int> a, vector<int> b)
 {
     int count = 0;
