@@ -7,7 +7,8 @@ vector<string> split_string(string);
 /*
  * Complete the getMoneySpent function below.
  */
-int getMoneySpent(vector<int> keyboards, vector<int> drives, int b) {
+int getMoneySpent(vector<int> keyboards, vector<int> drives, int b)
+{
     int result = -1;
     for (int i = 0; i < keyboards.size(); i++)
     {
@@ -20,7 +21,6 @@ int getMoneySpent(vector<int> keyboards, vector<int> drives, int b) {
         }
     }
     return result;
-
 }
 
 int main()
@@ -45,7 +45,8 @@ int main()
 
     vector<int> keyboards(n);
 
-    for (int keyboards_itr = 0; keyboards_itr < n; keyboards_itr++) {
+    for (int keyboards_itr = 0; keyboards_itr < n; keyboards_itr++)
+    {
         int keyboards_item = stoi(keyboards_temp[keyboards_itr]);
 
         keyboards[keyboards_itr] = keyboards_item;
@@ -58,7 +59,8 @@ int main()
 
     vector<int> drives(m);
 
-    for (int drives_itr = 0; drives_itr < m; drives_itr++) {
+    for (int drives_itr = 0; drives_itr < m; drives_itr++)
+    {
         int drives_item = stoi(drives_temp[drives_itr]);
 
         drives[drives_itr] = drives_item;
@@ -77,14 +79,15 @@ int main()
     return 0;
 }
 
-vector<string> split_string(string input_string) {
-    string::iterator new_end = unique(input_string.begin(), input_string.end(), [] (const char &x, const char &y) {
-        return x == y and x == ' ';
-    });
+vector<string> split_string(string input_string)
+{
+    string::iterator new_end = unique(input_string.begin(), input_string.end(), [](const char &x, const char &y)
+                                      { return x == y and x == ' '; });
 
     input_string.erase(new_end, input_string.end());
 
-    while (input_string[input_string.length() - 1] == ' ') {
+    while (input_string[input_string.length() - 1] == ' ')
+    {
         input_string.pop_back();
     }
 
@@ -94,7 +97,8 @@ vector<string> split_string(string input_string) {
     size_t i = 0;
     size_t pos = input_string.find(delimiter);
 
-    while (pos != string::npos) {
+    while (pos != string::npos)
+    {
         splits.push_back(input_string.substr(i, pos - i));
 
         i = pos + 1;
