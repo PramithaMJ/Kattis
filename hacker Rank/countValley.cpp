@@ -15,24 +15,19 @@ string rtrim(const string &);
  */
 
 int countingValleys(int steps, string path) {
-    int result = 0;
+    int valleyCount = 0;
     int level = 0;
-    for (int i = 0; i < steps; i++)
-    {
-        if (path[i] == 'U')
-        {
+    for (int i = 0; i < steps; i++) {
+        if (path[i] == 'U') {
             level++;
-            if (level == 0)
-            {
-                result++;
+            if (level == 0) {
+                valleyCount++;
             }
-        }
-        else
-        {
+        } else {
             level--;
         }
     }
-    return result;
+    return valleyCount;
  }
 
 int main()

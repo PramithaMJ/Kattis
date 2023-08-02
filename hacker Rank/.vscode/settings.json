@@ -2,6 +2,15 @@
     "files.associations": {
         "xstring": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "list": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "xhash": "cpp",
+        "xiosbase": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp"
     }
 }
