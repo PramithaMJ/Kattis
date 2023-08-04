@@ -24,6 +24,8 @@ void bonAppetit(vector<int> bill, int k, int b) {
         {
             sum += bill[i];
         }
+
+        
     }
     if (sum / 2 == b)
     {
