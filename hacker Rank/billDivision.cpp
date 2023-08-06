@@ -16,7 +16,8 @@ vector<string> split(const string &);
  *  3. INTEGER b
  */
 
-void bonAppetit(vector<int> bill, int k, int b) {
+void bonAppetit(vector<int> bill, int k, int b)
+{
     int sum = 0;
     for (int i = 0; i < bill.size(); i++)
     {
@@ -24,8 +25,6 @@ void bonAppetit(vector<int> bill, int k, int b) {
         {
             sum += bill[i];
         }
-
-        
     }
     if (sum / 2 == b)
     {
@@ -55,7 +54,8 @@ int main()
 
     vector<int> bill(n);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int bill_item = stoi(bill_temp[i]);
 
         bill[i] = bill_item;
@@ -71,35 +71,37 @@ int main()
     return 0;
 }
 
-string ltrim(const string &str) {
+string ltrim(const string &str)
+{
     string s(str);
 
     s.erase(
         s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace))));
 
     return s;
 }
 
-string rtrim(const string &str) {
+string rtrim(const string &str)
+{
     string s(str);
 
     s.erase(
         find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
+        s.end());
 
     return s;
 }
 
-vector<string> split(const string &str) {
+vector<string> split(const string &str)
+{
     vector<string> tokens;
 
     string::size_type start = 0;
     string::size_type end = 0;
 
-    while ((end = str.find(" ", start)) != string::npos) {
+    while ((end = str.find(" ", start)) != string::npos)
+    {
         tokens.push_back(str.substr(start, end - start));
 
         start = end + 1;
