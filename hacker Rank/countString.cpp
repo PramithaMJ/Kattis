@@ -221,10 +221,9 @@ int main()
         buildNFA(S, index, 0, 1);
         NFAtoDFA();
 
-        //		for (size_t i = 0; i < Matrix.size(); i++)
-        //			cout << i << " : " << setw(3) << setfill(' ') << DFA[i].first << " " << setw(3) << setfill(' ') << DFA[i].second << "\n";
-
         mexp(Matrix, L);
+
+
 
         long long s = 0;
         for (int j : final_state)
