@@ -1,12 +1,26 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include<set>
 
 using namespace std;
 
 bool f(int x, int y)
 {
     return x > y;
+}
+
+void setDemo(){
+    set<int> s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(-1);
+    s.insert(-10);
+
+    for(int x :s){
+        cout<<x<<" ";
+    }
+
 }
 
 int main()
