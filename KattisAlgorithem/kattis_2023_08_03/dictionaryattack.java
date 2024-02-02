@@ -5,9 +5,6 @@ import java.util.*;
 
 public class dictionaryattack {
 
-    // This problem has since been rejudged
-    // This solution will now give you TLE
-
     public static void addTransposes(HashMap<String, Integer> dictionary) {
 
         for (int changes = 1; changes <= 3; changes++) {
@@ -33,7 +30,6 @@ public class dictionaryattack {
                     t[i + 1] = temp;
                 }
             }
-
             dictionary.putAll(queue);
         }
     }
